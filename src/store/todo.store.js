@@ -8,9 +8,10 @@ const Filters = {
 
 const state = {
   todos: [
-    new Todo('Holitassss'),
-    new Todo('Holitassss2'),
-    new Todo('Holitassss3'),
+    new Todo('Aprender React.js'),
+    new Todo('Aprender MVC'),
+    new Todo('Leer Eloquent JS'),
+    new Todo('Aprender Redux'),
   ],
   filter: Filters.All,
 };
@@ -52,7 +53,12 @@ const addTodo = (description) => {
  * @param {String} todoId Todo identifier
  */
 const toggleTodo = (todoId) => {
-  throw new Error('Method not implemented.');
+  state.todos = state.todos.map(todo => {
+    if(todo.id === todoId) {
+      todo.done = !todo.done;
+    }
+    return todo;
+  });
 };
 
 /**
