@@ -24,6 +24,10 @@ const loadStore = () => {
   throw new Error("Method not implemented.");
 }
 
+const getTodos = (filter = Filters.all) => {
+  throw new Error("Method not implemented");
+}
+
 export default {
   addTodo,
   deleteTodo,
