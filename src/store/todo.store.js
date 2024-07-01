@@ -28,6 +28,23 @@ const getTodos = (filter = Filters.all) => {
   throw new Error("Method not implemented");
 }
 
+/**
+ * 
+ * @param {String} description
+ */
+const addTodo = (description) => {
+  throw new Error("Method not implemented.");
+}
+
+/**
+ * 
+ * @param {String} todoId Todo identifier 
+ */
+const toggleTodo = (todoId) => {
+  throw new Error("Method not implemented.");
+}
+
+
 export default {
   addTodo,
   deleteTodo,
