@@ -44,6 +44,15 @@ const toggleTodo = (todoId) => {
   throw new Error("Method not implemented.");
 }
 
+/**
+ * 
+ * @param {String} todoId Todo identifier 
+ */
+const deleteTodo = (todoId) => {
+  throw new Error("Method not implemented.");
+}
+
+
 
 export default {
   addTodo,
