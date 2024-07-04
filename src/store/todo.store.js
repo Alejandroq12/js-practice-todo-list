@@ -56,7 +56,9 @@ const setFilter = (filter = Filters.All) => {
   throw new Error("Method not implemented.");
 }
 
-
+const getCurrentFilter = () => {
+  throw new Error("Method not implemented.");
+}
 
 export default {
   addTodo,
