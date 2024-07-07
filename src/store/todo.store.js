@@ -25,7 +25,17 @@ const loadStore = () => {
 };
 
 const getTodos = (filter = Filters.all) => {
-  throw new Error('Method not implemented');
+  switch(filter) {
+    case filter.All:
+      return [...state.todos];
+    case filter.completed:
+      return state.todos.filter(todo => todo.done);
+    case filter.Pending:
+      return state.todos.filter(todo => !todo.done);
+    default:
+      throw new Error(`Option ${ filter } is not valid.`);
+
+  }
 };
 
 /**
