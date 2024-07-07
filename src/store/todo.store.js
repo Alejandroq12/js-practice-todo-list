@@ -20,6 +20,17 @@ const initStore = () => {
   console.log('InitStore 🥑');
 }
 
+const loadStore = () => {
+  throw new Error("Method not implemented.");
+}
+
 export default {
+  addTodo,
+  deleteTodo,
+  getCurrentFilter,
+  getTodos,
   initStore,
+  loadStore,
+  setFilter,
+  toggleTodo,
 }
