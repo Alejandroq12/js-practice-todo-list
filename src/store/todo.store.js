@@ -24,11 +24,11 @@ const loadStore = () => {
   throw new Error('Method not implemented.');
 };
 
-const getTodos = (filter = Filters.all) => {
+const getTodos = (filter = Filters.All) => {
   switch(filter) {
     case filter.All:
       return [...state.todos];
-    case filter.completed:
+    case filter.Completed:
       return state.todos.filter(todo => todo.done);
     case filter.Pending:
       return state.todos.filter(todo => !todo.done);
