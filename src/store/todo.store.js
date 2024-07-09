@@ -43,7 +43,8 @@ const getTodos = (filter = Filters.All) => {
  * @param {String} description
  */
 const addTodo = (description) => {
-  throw new Error('Method not implemented.');
+  if(!description) throw new Error('Description is required.');
+  state.todos.push(new Todo(description));
 };
 
 /**
