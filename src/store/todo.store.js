@@ -76,7 +76,7 @@ const setFilter = (newFilter = Filters.All) => {
 };
 
 const getCurrentFilter = () => {
-  throw new Error('Method not implemented.');
+  return state.filter;
 };
 
 export default {
