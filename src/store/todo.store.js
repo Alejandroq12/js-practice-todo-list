@@ -63,8 +63,16 @@ const deleteTodo = (todoId) => {
   state.todos = state.todos.filter(todo => todo.id !== todoId);
 };
 
-const setFilter = (filter = Filters.All) => {
-  throw new Error('Method not implemented.');
+const deleteCompleted = () => {
+  state.todos = state.todos.filter(todo => todo.done);
+}
+
+/**
+ * 
+ * @param {Filters} newFilter 
+ */
+const setFilter = (newFilter = Filters.All) => {
+  state.filter = newFilter;
 };
 
 const getCurrentFilter = () => {
@@ -73,6 +81,7 @@ const getCurrentFilter = () => {
 
 export default {
   addTodo,
+  deleteCompleted,
   deleteTodo,
   getCurrentFilter,
   getTodos,
