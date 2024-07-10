@@ -60,7 +60,7 @@ const toggleTodo = (todoId) => {
  * @param {String} todoId Todo identifier
  */
 const deleteTodo = (todoId) => {
-  throw new Error('Method not implemented.');
+  state.todos = state.todos.filter(todo => todo.id !== todoId);
 };
 
 const setFilter = (filter = Filters.All) => {
