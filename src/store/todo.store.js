@@ -27,11 +27,11 @@ const loadStore = () => {
 
 const getTodos = (filter = Filters.All) => {
   switch(filter) {
-    case filter.All:
+    case Filters.All:
       return [...state.todos];
-    case filter.Completed:
+    case Filters.Completed:
       return state.todos.filter(todo => todo.done);
-    case filter.Pending:
+    case Filters.Pending:
       return state.todos.filter(todo => !todo.done);
     default:
       throw new Error(`Option ${ filter } is not valid.`);
